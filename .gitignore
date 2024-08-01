@@ -1,0 +1,7 @@
+.idea/
+knowescape/__pycache__/
+virtual/
+db.sqlite3
+knowescape/Scripts/__pycache__/
+knowescape/migrations/__pycache__/
+knowescape/migrations

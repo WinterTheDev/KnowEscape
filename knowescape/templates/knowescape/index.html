@@ -1,0 +1,129 @@
+{% extends 'andromedesweb/base.html' %}
+{% load static %}
+
+{% block styles %}<link rel="stylesheet" href="{% static 'andromedesweb/index.css' %}">{% endblock styles%}
+
+{% block header %}
+    <div class="container-fluid background-container p-0 m-0">
+            <video id="header-background" autoplay muted loop loading="lazy">
+                <source src="{% static 'andromedesweb/videos/Andromedes Header.mp4' %}" type="video/mp4">
+                <source src="{% static 'andromedesweb/videos/Andromedes Header.webm' %}" type="video/webm">
+                Your browser does not support the video tag.
+            </video>     
+        <div class="header-text">
+            <div class="container-xxl header-container">
+                <h1 class="header-title">
+                    Make the<br>most out of your<br>business <span class="header-tagline">online</span>
+                </h1>
+            </div>
+        </div>
+    </div>
+{% endblock header %}
+{% block content %}
+    <section id="services">
+        <div class="container-xl services-container py-5">
+            <div class="services-header mb-5">
+                <h3 class="services-heading ps-4 m-0">All our services at<br>a glance...</h2>
+                <h5 class="services-tagline ps-4 mt-4">
+                    We offer a wide variety of web services, so here's<br>
+                    a quick summary of the main services we offer.<br>
+                    <span>To the best of our ability.. Always</span>
+                </h5>
+            </div>
+            <div class="services-grid">
+                <div class="box website-box">
+                    <img src="{% static 'andromedesweb/images/website-box-bg.jpg' %}" class="box-img">
+                    <div class="box-text">
+                        <h1 class="box-title">Websites</h1>
+                        <p class="box-description">
+                            From online stores to professional portfolios 
+                            to get you hired.
+                        </p>
+                    </div>
+                </div>
+                <div class="box vCard-box">
+                    <img src="{% static 'andromedesweb/images/virtual-business-phone.png' %}" class="box-img">
+                    <div class="box-text vCard-text">
+                        <h1 class="box-title">Virtual Business Cards</h1>
+                        <p class="box-description vCard-description">
+                            A whole new way to reintroduce yourself 
+                            and never be forgetten
+                        </p>
+                    </div>
+                </div>
+                <div class="box brand-box">
+                    <img src="{% static 'andromedesweb/images/brand-box-bg.jpg' %}" class="box-img">
+                    <div class="box-text">
+                        <h1 class="box-title">Brand Design</h1>
+                        <p class="box-description">
+                            Design your brand or re-design it.
+                            We can make you stand out from the crowd
+                        </p>
+                    </div>
+                </div>
+                <div class="box logo-box">
+                    <img src="{% static 'andromedesweb/images/logo-box-bg.jpg' %}" class="box-img">
+                    <div class="box-text">
+                        <h1 class="box-title">Logo Design</h1>
+                    <p class="box-description">
+                        Become a symbol.
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container-xl contact-container py-5">
+            <div class="contact-details">
+                <img src="{% static 'andromedesweb/images/contact-bg.jpg' %}" class="contact-img">
+                <h1 class="contact-header ps-3 m-3">
+                    Questions?<br>
+                    Reach Out.
+                </h1>
+                <p class="contact-letter mt-5 ms-3">
+                    Communication and feedback are imperative 
+                    in creating a good relationship between 
+                    business and customer, and even more important 
+                    in making sure you get the very best value for 
+                    your business, so let us know what you need!
+                </p>
+            </div>
+            <div class="contact-form p-3">
+                <form action="#" method="post">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="form-block">
+                            <label for="id_first_name">First name:</label>
+                            <input type="text" name="first_name" required="" id="id_first_name">
+                        </div>
+                    
+                        <div class="form-block">
+                            <label for="id_last_name">Last name:</label>
+                            <input type="text" name="last_name" required="" id="id_last_name">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-block">
+                            <label for="id_email">Email:</label>
+                            <input type="email" name="email" maxlength="320" required="" id="id_email">
+                        </div>
+                    
+                        <div class="form-block">
+                            <label for="id_company">Company (Optional):</label>
+                            <input type="text" name="company" id="id_company">
+                        </div>
+                    </div>
+                    <div class="form-row message-row">
+                        <div class="form-block message-block">
+                            <label for="id_message">Message:</label>
+                            <textarea name="message" required="" id="id_message" placeholder="Your Message..."></textarea>
+                        </div>
+                        <button id="contact-submit" type="submit">Submit</button>
+                    </div>                 
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+{% endblock content %}
