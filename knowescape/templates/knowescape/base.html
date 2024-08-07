@@ -13,11 +13,11 @@
 
     <meta property="og:title" content="Websites and Virtual Business Cards">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://andromedesweb.com">
-    <meta property="og:image" content="{% static 'andromedesweb/images/website-box-bg.jpg' %}">
+    <meta property="og:url" content="https://knowescape.com">
+    <meta property="og:image" content="{% static 'knowescape/images/website-box-bg.jpg' %}">
     <meta property="og:description" content="A Web-Based developer company focused on building state-of-the-art websites at low cost.">
     <meta property="og:locale" content="en_ZA">
-    <meta property="og:site_name" content="AndromedesWeb">
+    <meta property="og:site_name" content="KnowEscape">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,23 +29,17 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="{% static 'andromedesweb/base.css' %}">
-    {% block styles %}{% endblock styles %}
+    <link rel="stylesheet" href="{% static 'knowescape/base.css' %}">
+    <link rel="stylesheet" href="{% static 'knowescape/animations.css' %}">
+
     <title>Home - Andromedes Web</title>
 </head>
 <body>
-    <!--
-    <div id="splash-screen">
-        <h5 id="splash-brand-text" class="m-0">
-            Andromedes<span>Web</span>
-        </h5>
-    </div>
-    -->
     <header>
         <nav>
             <div class="nav-brand col-2">
                 <h5 class="nav-brand-text m-0">
-                    Andromedes<span>Web</span>
+                    Know<span>Escape</span>
                 </h5>
             </div>
             <ul class="nav-list col-6 col-xxl-5 d-none d-lg-flex m-0 p-0">
@@ -73,7 +67,7 @@
                     <a href="#" class="nav-link">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{% url 'business-cards' %}" class="nav-link"><span>Virtual</span> Business Cards</a>
+                    <a href="#" class="nav-link"><span>Virtual</span> Business Cards</a>
                 </li>
             </ul>
             {% block accounts %}{% endblock %}

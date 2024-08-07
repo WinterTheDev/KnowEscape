@@ -1,78 +1,3 @@
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-@keyframes riseIn {
-    from {
-        opacity: 0;
-        transform: translateY(3dvh);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideIn {
-    from {
-        transform: translate(-100dvw);
-    }
-
-    to {
-        transform: translateX(0);
-    }
-}
-
-@keyframes sub-nav-slide {
-    from {
-        transform: translate(-2rem);
-    }
-
-    to {
-        transform: translateX(0);
-    }
-}
-
-@keyframes splash {
-    from {
-        transform: scale(1);
-    }
-
-    to {
-        transform: scale(1.2);
-    }
-}
-
-#splash-brand-text {
-    font-size: 2rem;
-    color: #000000;
-    font-weight: 700;
-    font-style: italic;
-    animation: 2s ease infinite alternate splash, 2s ease fadeIn;
-}
-
-#splash-brand-text span{
-    color: #9205a5;
-}
-
-#splash-screen {
-    display: grid;
-    height: 100dvh;
-    place-content: center;
-    background-color: #ffffff;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
 nav {
     padding-inline: 4rem;
     width: 100%;
@@ -85,22 +10,22 @@ nav {
 
 .nav-brand-text {
     font-size: 2rem;
-    color: #ffffff;
+    color: #E76903;
     font-weight: 700;
     font-style: italic;
     animation: riseIn 2s 5s;
 }
 
 .nav-brand-text span{
-    color: #9205a5;
+    color: #012060;
 }
 
 .nav-list {
     display: flex;
     list-style: none;
+    align-items: center;
     border-radius: 8dvh;
     animation: fadeIn 2s 5s;
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -111,7 +36,7 @@ nav {
 .nav-link {
     text-align: center;
     font-weight: 600;
-    color: #ffffff;
+    color: #012060;
     text-decoration: none;
     transition: transform 0.2s ease;
     position: relative;
@@ -121,11 +46,11 @@ nav {
 
 .nav-link:hover,
 .nav-link:active {
-    color: #ffffff;
+    color: #E76903;
 }
 
 .nav-link span {
-    color: #9205a5;
+    color: #E76903;
     font-style: italic;
 }
 
@@ -138,7 +63,7 @@ nav {
     border-radius: 5px;
     position: absolute;
     transform: translateX(-50%);
-    background-color: #9205a5;
+    background-color: #E76903;
     transition: 0.3s width;
 }
 
@@ -185,9 +110,9 @@ nav {
 }
 
 .sub-nav-link:hover {
-    color: #9205a5;
+    color: #E76903;
     padding-left: 1rem;
-    background-color: #9205a525;
+    background-color: #012060;
 }
 
 .nav-item:hover .sub-nav,

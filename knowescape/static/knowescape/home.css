@@ -1,0 +1,441 @@
+:root {
+    --green: #23352D;
+    --orange: #E66901;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend', 'Figtree';
+}
+
+body {
+    
+}
+
+header {
+    height: 100dvh;
+    min-height: 75dvh;
+    background-color: #23352D;
+}
+
+.header-container {
+    height: 100%;
+}
+
+#offcanvas-nav {
+    height: 100dvh;
+    background-color: var(--green);
+}
+
+.offcanvas-header {
+    height: 4rem;
+    padding: .3rem;
+    padding-inline: 1rem;
+}
+
+.offcanvas-nav-brand {
+    height: 100%;
+}
+
+.offcanvas-nav-brand img {
+    height: 100%;
+}
+
+nav {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.nav-brand {
+    height: 100%;
+    padding: .5rem;
+}
+
+.nav-brand img {
+    height: 100%;
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    display: none;
+    list-style: none;
+}
+
+.nav-menu {
+    top: 50%;
+    right: 0;
+    font-size: 1.4rem;
+    color: #ffffff;
+    position: absolute;
+    margin-inline: 1rem;
+    transform: translateY(-50%);
+}
+
+.header-content {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: calc(100% - 5rem);
+}
+
+.header-text {
+    height: 40%;
+    text-align: center;
+}
+
+.header-title {
+    color: #ffffff;
+    font-size: 1.6rem;
+}
+
+.header-tagline {
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: #ffffff;
+    font-family: 'Lexend', 'Figtree';
+}
+
+.header-title span {
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: var(--orange);
+    text-transform: uppercase;
+}
+
+.header-images {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+}
+
+.header-row div {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.header-row.first, .header-row.last {
+    height: 30%;
+    justify-content: space-evenly;
+}
+
+.header-row.middle {
+    height: 40%;
+    justify-content: space-between;
+}
+
+.header-row.first div:first-child,
+.header-row.first div:last-child,
+.header-row.last div:first-child,
+.header-row.last div:last-child,
+.header-row.middle div:first-child,
+.header-row.middle div:last-child {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+/* header first row */
+    
+.header-row.first div:first-child {
+    background: url(images/header-warehouse.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.header-row.first div:last-child {
+    background: url(images/header-storefront.jpg) center no-repeat;
+    background-size: cover;
+}
+
+/* middle row */
+.header-row.middle div:first-child {
+    background: url(images/header-builder.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.header-row.middle div:nth-child(2) {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background: url(images/header-instructor.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.header-row.middle div:last-child {
+    background: url(images/header-architect.jpg) center no-repeat;
+    background-size: cover;
+}
+
+/* header last row */
+    
+.header-row.last div:first-child {
+    background: url(images/header-warehouse.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.header-row.last div:last-child {
+    background: url(images/header-storefront.jpg) center no-repeat;
+    background-size: cover;
+}
+
+/* smaller screens */
+@media screen and (max-height: 720px){
+
+    .header-images {
+        margin-block-start: 2rem;
+    }
+
+    .header-row.first, .header-row.last {
+        display: none;
+    }
+}
+
+/* Tablet Portrait */
+@media screen and (min-width: 429px) and (max-width: 810px) {
+    
+}
+
+/* Tablet - Landscape */
+@media screen and (min-width: 811px) and (max-width: 1080px) {
+
+}
+
+/* laptop */
+
+@media screen and (min-width: 1081px) and (max-width: 1366px) {
+    header {
+        height: 100vh;
+        background-color: var(--green);
+    }
+    
+    nav {
+        box-shadow: none;
+        justify-content: space-between;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+    
+    .nav-brand {
+        width: 20%;
+    }
+    
+    .nav-list {
+        display: flex;
+    }
+    
+    .nav-item {
+        margin: 1rem;
+    }
+    
+    .nav-link {
+        color: #ffffff;
+        position: relative;
+        text-transform: uppercase;
+        transition: .3s ease transform;
+        font-family: 'Lexend', 'Figtree';
+    }
+    
+    .nav-link::after {
+        left: 0;
+        height: 4px;
+        content: '';
+        width: 0;
+        bottom: -2px;
+        position: absolute;
+        border-radius: 2px;
+        background-color: var(--orange);
+        transition: .3s ease width;
+    }
+    
+    .nav-link:hover::after {
+        width: 100%;
+    }
+    
+    .nav-link:hover {
+        color: #ffffff;
+        transform: translateX(-4px);
+    }
+    
+    .header-content {
+        align-items: center;
+        padding-inline: 2rem;
+        flex-direction: row;
+        height: calc(100% - 5rem);
+    }
+    
+    .header-text {
+        width: 50%;
+        text-align: left;
+        height: min-content;
+    }
+    
+    .header-title {
+        font-size: 2.8rem;
+    }
+    
+    .header-title span {
+        font-size: 4.6rem;
+    }
+
+    .header-tagline {
+        width: 90%;
+        font-size: 1.2rem;       
+    }
+    
+    .header-images {
+        margin: 0;
+        width: 50%;
+        height: 100%;
+        align-items: center;
+    }
+    
+    .header-row {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .header-row div {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    
+    .header-row.first, .header-row.last {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .header-row.middle {
+        height: 40%;
+        justify-content: space-between;
+    }
+    
+    /* header Middle row */
+    .header-row.middle div:nth-child(2) {
+        width: 14rem;
+        height: 14rem;
+    }
+    
+    .header-row.first div:first-child,
+    .header-row.first div:last-child,
+    .header-row.last div:first-child,
+    .header-row.last div:last-child,
+    .header-row.middle div:first-child,
+    .header-row.middle div:last-child {
+        width: 11rem;
+        height: 11rem;
+    }
+
+}
+
+/* Desktop */
+
+@media screen and (min-width: 1367px) {
+    
+    nav {
+        box-shadow: none;
+        justify-content: space-between;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+    
+    .nav-list {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 1rem;
+    }
+    
+    .nav-link {
+        color: #ffffff;
+        position: relative;
+        text-transform: uppercase;
+        transition: .3s ease transform;
+        font-family: 'Lexend', 'Figtree';
+    }
+    
+    .nav-link::after {
+        left: 0;
+        height: 4px;
+        content: '';
+        width: 0;
+        bottom: -2px;
+        position: absolute;
+        border-radius: 2px;
+        background-color: var(--orange);
+        transition: .3s ease width;
+    }
+    
+    .nav-link:hover::after {
+        width: 100%;
+    }
+    
+    .nav-link:hover {
+        color: #ffffff;
+        transform: translateX(-4px);
+    }
+
+    .header-content {
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .header-text {
+        width: 50%;
+        height: min-content;
+        text-align: left;
+    }
+
+    .header-title {
+        font-size: 3.6rem;
+    }
+
+    .header-title span {
+        font-size: 5rem;
+    }
+
+    .header-images {
+        width: 50%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header-tagline {
+        font-size: 1.2rem;
+        width: 90%;
+    }
+
+    .header-row.first div:first-child,
+    .header-row.first div:last-child,
+    .header-row.last div:first-child,
+    .header-row.last div:last-child,
+    .header-row.middle div:first-child,
+    .header-row.middle div:last-child {
+        width: 14rem;
+        height: 14rem;
+    }
+
+    .header-row.middle div:nth-child(2) {
+        width: 18rem;
+        height: 18rem;
+    }
+}

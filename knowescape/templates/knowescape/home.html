@@ -1,0 +1,110 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <meta name="KnowEscape Consulting"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="KnowEscape">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="english">
+    <meta name="description" content="Empowerment through Skills Development, Enterprise and Supplier Development, and Start-Up Support">
+
+    <meta property="og:title" content="Skills and Business Development">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://knowescape.com">
+    <meta property="og:image" content="{% static 'knowescape/images/website-box-bg.jpg' %}">
+    <meta property="og:description" content="empowering individuals and organizations through comprehensive consultancy and training services.">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:site_name" content="KnowEscape">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <!-- CDNs -->
+    <script src="https://kit.fontawesome.com/f8dced6eec.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- imports -->
+    <link rel="stylesheet" href="{% static 'knowescape/home.css' %}">
+    <link rel="stylesheet" href="{% static 'knowescape/animations.css' %}">
+
+    <title>KnowEscape - {{page_title}}</title>
+</head>
+<body>
+    <header id="header">
+        <div class="container-fluid header-container p-0">
+            <nav>
+                <div class="nav-brand">
+                    <img src="{% static 'knowescape/brand/nav-logo.png' %}">
+                </div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Our Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <a class="nav-menu" data-bs-toggle="offcanvas" href="#offcanvas-nav" role="button" aria-controls="offcanvas-nav">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </nav>
+            <div class="header-content">
+                <div class="header-text">
+                    <h1 class="header-title">
+                        Development through<br>
+                        <span>Empowerment</span>
+                    </h1>
+                    <p class="header-tagline">
+                        Empowering individuals and organizations through comprehensive
+                        consultancy and training services, to foster <span>growth</span> and 
+                        <span>sustainability</span> in our local communities.
+                    </p>
+                </div>
+                <div class="header-images">
+                    <div class="header-row first">
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="header-row middle">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="header-row last">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas-nav" aria-labelledby="offcanvas-nav-title">
+            <div class="offcanvas-header">
+                <div class="offcanvas-nav-brand">
+                    <img src="{% static 'knowescape/brand/nav-logo.png' %}">
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>            
+        </div>
+    </header>
+    <section id="cta">
+        <div class="container-fluid cta-container">
+            
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

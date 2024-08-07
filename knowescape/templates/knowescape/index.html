@@ -1,15 +1,10 @@
-{% extends 'andromedesweb/base.html' %}
+{% extends 'knowescape/base.html' %}
 {% load static %}
 
-{% block styles %}<link rel="stylesheet" href="{% static 'andromedesweb/index.css' %}">{% endblock styles%}
+{% block styles %}<link rel="stylesheet" href="{% static 'knowescape/index.css' %}">{% endblock styles%}
 
 {% block header %}
-    <div class="container-fluid background-container p-0 m-0">
-            <video id="header-background" autoplay muted loop loading="lazy">
-                <source src="{% static 'andromedesweb/videos/Andromedes Header.mp4' %}" type="video/mp4">
-                <source src="{% static 'andromedesweb/videos/Andromedes Header.webm' %}" type="video/webm">
-                Your browser does not support the video tag.
-            </video>     
+    <div class="container-fluid background-container p-0 m-0">  
         <div class="header-text">
             <div class="container-xxl header-container">
                 <h1 class="header-title">
@@ -32,7 +27,7 @@
             </div>
             <div class="services-grid">
                 <div class="box website-box">
-                    <img src="{% static 'andromedesweb/images/website-box-bg.jpg' %}" class="box-img">
+                    <img src="{% static 'knowescape/images/website-box-bg.jpg' %}" class="box-img">
                     <div class="box-text">
                         <h1 class="box-title">Websites</h1>
                         <p class="box-description">
@@ -42,7 +37,7 @@
                     </div>
                 </div>
                 <div class="box vCard-box">
-                    <img src="{% static 'andromedesweb/images/virtual-business-phone.png' %}" class="box-img">
+                    <img src="{% static 'knowescape/images/virtual-business-phone.png' %}" class="box-img">
                     <div class="box-text vCard-text">
                         <h1 class="box-title">Virtual Business Cards</h1>
                         <p class="box-description vCard-description">
@@ -52,7 +47,7 @@
                     </div>
                 </div>
                 <div class="box brand-box">
-                    <img src="{% static 'andromedesweb/images/brand-box-bg.jpg' %}" class="box-img">
+                    <img src="{% static 'knowescape/images/brand-box-bg.jpg' %}" class="box-img">
                     <div class="box-text">
                         <h1 class="box-title">Brand Design</h1>
                         <p class="box-description">
@@ -62,7 +57,7 @@
                     </div>
                 </div>
                 <div class="box logo-box">
-                    <img src="{% static 'andromedesweb/images/logo-box-bg.jpg' %}" class="box-img">
+                    <img src="{% static 'knowescape/images/logo-box-bg.jpg' %}" class="box-img">
                     <div class="box-text">
                         <h1 class="box-title">Logo Design</h1>
                     <p class="box-description">
@@ -76,7 +71,7 @@
     <section id="contact">
         <div class="container-xl contact-container py-5">
             <div class="contact-details">
-                <img src="{% static 'andromedesweb/images/contact-bg.jpg' %}" class="contact-img">
+                <img src="{% static 'knowescape/images/contact-bg.jpg' %}" class="contact-img">
                 <h1 class="contact-header ps-3 m-3">
                     Questions?<br>
                     Reach Out.

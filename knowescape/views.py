@@ -35,4 +35,4 @@ def index(request):
         'ContactForm': form,
     }
 
-    return render(request, "andromedesweb/index.html", context)
+    return render(request, "knowescape/home.html", context)

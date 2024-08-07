@@ -10,28 +10,11 @@ header {
     position: relative;
 }
 
-header::before {
-    inset: 0;
-    z-index: -1;
-    content: '';
-    position: absolute;
-    background-color: #00000038;
-}
-
 .background-container {
     width: 100%;
     height: 100%;
     overflow: hidden;
-}
-
-#header-background {
-    top: 0;
-    left: 0;
-    z-index: -2;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
+    background-color: #ffffff;
 }
 
 .header-text {
@@ -45,13 +28,13 @@ header::before {
 
 .header-title {
     font-size: 4rem;
-    color: #ffffff;
+    color: #012060;
     font-family: 'Unbounded';
 }
 
 .header-tagline {
     font-size: 4rem;
-    color: #9205a5;
+    color: #E76903;
     font-weight: 900; 
     font-family: 'Unbounded';
 }
