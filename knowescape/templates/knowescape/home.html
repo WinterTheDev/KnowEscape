@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="{% static 'knowescape/home.css' %}">
     <link rel="stylesheet" href="{% static 'knowescape/animations.css' %}">
 
-    <title>KnowEscape - {{page_title}}</title>
+    <title>{{page_title}} - KnowEscape</title>
 </head>
 <body>
     <header id="header">
@@ -99,9 +99,52 @@
               </div>            
         </div>
     </header>
-    <section id="cta">
-        <div class="container-fluid cta-container">
-            
+    <section id="services">
+        <div class="container-fluid services-container">
+            <div class="services-header">
+                <h2 class="services-heading">All our services<br><span>at a glance...</span></h2>
+            </div>
+            <div class="services-grid">
+                <div class="box website-box">
+                    <img src="{% static 'knowescape/images/header-boardroom.jpeg' %}" class="box-img">
+                    <div class="box-text">
+                        <h3 class="box-title">Enterprise & Supplier<br> Development</h3>
+                        <p class="box-description">
+                            From online stores to professional portfolios 
+                            to get you hired.
+                        </p>
+                    </div>
+                </div>
+                <div class="box vCard-box">
+                    <img src="{% static 'knowescape/images/header-meeting.jpeg' %}" class="box-img">
+                    <div class="box-text vCard-text">
+                        <h3 class="box-title">Skills Development</h3>
+                        <p class="box-description vCard-description">
+                            A whole new way to reintroduce yourself 
+                            and never be forgetten
+                        </p>
+                    </div>
+                </div>
+                <div class="box brand-box">
+                    <img src="{% static 'knowescape/images/header-storefront.jpg' %}" class="box-img">
+                    <div class="box-text">
+                        <h3 class="box-title">Start-Up Support</h3>
+                        <p class="box-description">
+                            Design your brand or re-design it.
+                            We can make you stand out from the crowd
+                        </p>
+                    </div>
+                </div>
+                <div class="box logo-box">
+                    <img src="{% static 'knowescape/images/logo-box-bg.jpg' %}" class="box-img">
+                    <div class="box-text">
+                        <h3 class="box-title">Logo Design</h3>
+                        <p class="box-description">
+                            Become a symbol.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

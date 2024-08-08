@@ -33,6 +33,7 @@ def index(request):
 
     context = {
         'ContactForm': form,
+        'page_title': 'Business & Skills Development'
     }
 
     return render(request, "knowescape/home.html", context)
