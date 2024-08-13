@@ -29,9 +29,10 @@ header {
 }
 
 .offcanvas-header {
-    height: 4rem;
+    height: 6rem;
     padding: .3rem;
     padding-inline: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .offcanvas-nav-brand {
@@ -42,14 +43,27 @@ header {
     height: 100%;
 }
 
+.offcanvas-nav-list {
+    padding: 0;
+    display: flex;
+    list-style: none;
+    color: #ffffff;
+    font-size: 1.6rem;
+    flex-direction: column;
+}
+
+.offcanvas-nav-list > .nav-item{
+    padding-block: 1rem;
+    padding-inline: .5rem;
+}
+
 nav {
     width: 100%;
-    height: 5rem;
+    height: 6rem;
     display: flex;
     position: relative;
     align-items: center;
     justify-content: center;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .nav-brand {
@@ -190,6 +204,48 @@ nav {
     background-size: cover;
 }
 
+#cta {
+    height: 100%;
+}
+
+.cta-container {
+    height: 100%;
+}
+
+.cta-header {
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+}
+
+.cta-header img {
+    height: 100%;
+    padding: 4px;
+    object-fit: contain;
+}
+
+.cta-text {
+    color: #ffffff;
+    text-align: center;
+    padding-inline: 16px;
+}
+
+.cta-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.cta-link {
+    cursor: pointer;
+    color: #ffffff;
+    margin-block: 1rem;
+    border-radius: 5px;
+    padding-block: 1rem;
+    text-decoration: none;
+    padding-inline: 1.8rem;
+    background-color: var(--orange);
+}
+
 #services {
     height: 100vh
 }
@@ -199,7 +255,7 @@ nav {
     display: flex;
     padding: 1rem;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .services-heading {
@@ -293,6 +349,10 @@ nav {
 
     .header-row.first, .header-row.last {
         display: none;
+    }
+
+    .offcanvas-header {
+        height: 6rem;
     }
 }
 
@@ -576,6 +636,10 @@ nav {
     .header-row.middle div:nth-child(2) {
         width: 18rem;
         height: 18rem;
+    }
+
+    .services-container {
+        padding-inline: 10rem;
     }
 
     .services-header {
