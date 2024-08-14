@@ -330,10 +330,6 @@ nav {
     transition: margin 0.5s ease;
 }
 
-/* .service-title {
-    color: var(--orange);
-} */
-
 .service-description {
     display: none;
 }
@@ -349,6 +345,73 @@ nav {
     padding-block: .4rem;
     text-decoration: none;
     padding-inline: 1rem;
+    background-color: var(--orange);
+}
+
+#contact {
+    height: 100%;
+    min-height: 100dvh;
+}
+
+.contact-container {
+    height: 100%;
+    position: relative;
+}
+
+.contact-header {
+    display: flex;
+    padding-block: 1rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-header h1, p {
+    color: #ffffff;
+}
+
+.contact-header span {
+    color: var(--orange);
+}
+
+#contact-form {
+    height: 100%;
+    padding: 16px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: var(--green);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.form-block {
+    margin-block: 8px;
+}
+.form-block input,
+.form-block textarea {
+    width: 100%;
+    outline: none;
+    display: block;
+    border-radius: 4px;
+    border: none;
+    padding: 1rem;
+    background-color: #1a2922;
+}
+
+.form-block label {
+    margin-bottom: 8px;
+    color: var(--orange);
+}
+
+#contact-form button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    margin-block: 1rem;
+    border-radius: 5px;
+    padding-block: 1rem;
+    text-decoration: none;
+    padding-inline: 1.8rem;
     background-color: var(--orange);
 }
 

@@ -18,10 +18,10 @@ def index(request):
 
             try:
                 send_mail(
-                    f'Inquiry by {sender_first} {sender_last} from {company}',
+                    f'Inquiry by {sender_first} {sender_last}',
                     sender_message,
                     sender_email,
-                    ['rhulanimogotsi@gmail.com']
+                    ['rhulanimogotsi28@gmail.com']
                 )
 
                 messages.success(request, 'Message sent! Expect to hear from us soon!')
