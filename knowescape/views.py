@@ -21,7 +21,7 @@ def index(request):
                     f'Inquiry by {sender_first} {sender_last}',
                     sender_message,
                     sender_email,
-                    ['rhulanimogotsi28@gmail.com']
+                    ['rhulanimogotsi28@gmail.com', 'rhulanimogotsi@gmail.com']
                 )
 
                 messages.success(request, 'Message sent! Expect to hear from us soon!')

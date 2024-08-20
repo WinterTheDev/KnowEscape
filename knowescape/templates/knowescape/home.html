@@ -189,6 +189,19 @@
             </div>
         </div>
     </section>
+    <section id="accreditations">
+        <div class="container-fluid accreditations-container">
+            <article class="accreditation">
+                <i class="fa-solid fa-star"></i>
+                <h2>QCTO Accredited</h2>
+                <p>
+                    This accreditation means we are equipped with
+                    all the necessary tools and resources to take
+                    your business to the next level!
+                </p>
+            </article>
+        </div>
+    </section>
     <section id="contact">
         <div class="container-fluid contact-container">
             <div class="contact-header">
@@ -196,7 +209,11 @@
                 <p>How can we <span>transform your business?</span></p>
             </div>
             <div class="contact-content">
-                <form action="" id="contact-form">
+                <div class="contact-img">
+                    <img src="{% static 'knowescape/images/contact-bg.jpeg' %}">
+                </div>
+                <form action="#" method="POST" id="contact-form">
+                    {% csrf_token %}
                     <div class="form-block">
                         <label for="id_first_name">First name:</label>
                         <input type="text" name="first_name" required id="id_first_name">
