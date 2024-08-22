@@ -59,6 +59,26 @@ header {
     border-left: 4px solid var(--orange);
 }
 
+.offcanvas-actions {
+    gap: 1rem;
+    display: flex;
+    padding-inline: 1rem;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.offcanvas-action {
+    flex-grow: .7;
+    cursor: pointer;
+    color: #ffffff;
+    border-radius: 5px;
+    padding-block: 1rem;
+    text-decoration: none;
+    padding-inline: 1rem;
+    background-color: var(--orange);
+}
+
 .offcanvas-footer ul {
     padding: 1rem;
     display: flex;
@@ -405,7 +425,6 @@ nav {
 }
 
 #contact-form {
-    height: 100%;
     padding: 16px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -886,7 +905,6 @@ nav {
     }
 
     .contact-img img {
-        height: 100%;
         width: 100%;
         object-fit: cover;
         border-radius: 4px;
@@ -895,6 +913,7 @@ nav {
 
     #contact-form {
         width: 60%;
+        border-radius: 5px;
     }
 
     .form-block {
