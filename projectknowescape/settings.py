@@ -10,28 +10,38 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
+import dj_database_url
 from pathlib import Path
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-uvjtwq_!p_9nv$kga&1q5+3+(g%fwu4)ymjqysa%j4a+npmcvt'
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', '10.0.0.127', 'localhost', '.ngrok-free.app']
+ALLOWED_HOSTS = ['knowescape.co.za',
+                'www.knowescape.co.za',
+                'https://www.knowescape.co.za']
 
+
+CSRF_TRUSTED_ORIGINS = ['https://www.knowescape.co.za']
 
 # Application definition
 
 INSTALLED_APPS = [
     'knowescape',
+    'phonenumber_field',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,6 +52,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleWare',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -77,10 +88,11 @@ WSGI_APPLICATION = 'projectknowescape.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / "db.sqlite3"
     }
 }
 
+DATABASES["default"] = dj_database_url.parse(os.getenv("DB_URL"))
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -118,11 +130,14 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-EMAIL_HOST = 'smtp.gmail.com'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+EMAIL_HOST = 'mail.knowescape.co.za'
 EMAIL_PORT = '587'
-EMAIL_HOST_USER = 'andromedeswebsolutions@gmail.com'
-EMAIL_HOST_PASSWORD = 'dyzeetdbydbshkuc'
-EMAIL_USE_TLScmd = True
+EMAIL_HOST_USER = 'knowesca@knowescape.co.za'
+EMAIL_HOST_PASSWORD = '#Rhandzu01'
+EMAIL_USE_TLS = True
 
 
 # Default primary key field type
