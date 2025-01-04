@@ -1,0 +1,58 @@
+:root {
+    --green: #23352D;
+    --orange: #E66901;
+}
+
+footer {
+    height: 60vh;
+    margin-top: 7rem;
+    background-color: #212e28;
+}
+
+.footer-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 20rem;
+    height: 20rem;
+}
+
+.footer-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer-nav {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-column {
+    flex: .25;
+}
+
+.footer-column h4 {
+    color: var(--orange);
+}
+
+.footer-column ul {
+    padding: 0;
+}
+
+.designer-credit {
+    height: 3rem;
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+}
+
+.designer-credit a {
+    text-decoration: none;
+    color: var(--orange);
+}
