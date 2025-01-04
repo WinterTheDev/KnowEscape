@@ -31,7 +31,9 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = os.getenv("DEBUG")
 
 ALLOWED_HOSTS = ['knowescape.co.za',
-                 'www.knowescape.co.za']
+                 'www.knowescape.co.za',
+                 'vercel.app'
+]
 
 
 # CSRF_TRUSTED_ORIGINS = ['https://www.knowescape.co.za']
