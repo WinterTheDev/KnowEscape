@@ -6,7 +6,9 @@
 
         "use": "@vercel/python",
 
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" },
+
+        "buildCommand": "python manage.py migrate && (python manage.py createsuperuser --noinput || echo 'Superuser exists or creation failed')"
 
     }],
 
