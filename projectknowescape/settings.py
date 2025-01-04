@@ -32,7 +32,7 @@ DEBUG = os.getenv("DEBUG")
 
 ALLOWED_HOSTS = ['knowescape.co.za',
                  'www.knowescape.co.za',
-                 'vercel.app'
+                 '.vercel.app'
 ]
 
 
