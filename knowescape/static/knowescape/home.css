@@ -633,7 +633,6 @@ nav {
     font-size: 14px;
 }
 
-
 /* smaller screens */
 @media screen and (max-height: 720px){
 
@@ -651,6 +650,14 @@ nav {
 
     .offcanvas-header {
         height: 6rem;
+    }
+
+    footer {
+        height: 100%
+    }
+
+    .footer-nav {
+        display: none;
     }
 }
 
