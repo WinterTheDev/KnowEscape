@@ -86,23 +86,20 @@ WSGI_APPLICATION = 'projectknowescape.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / "db.sqlite3"
-#     }
-# }
+
+DATABASE_URL = os.getenv('DATABASE_URL')
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DATABASE_PGDATABASE'),       # Database name
-        'USER': os.getenv('DATABASE_PGUSER'),           # Database user
-        'PASSWORD': os.getenv('DATABASE_PGPASSWORD'),   # Database password
-        'HOST': os.getenv('DATABASE_PGHOST'),           # Database host
-        'PORT': os.getenv('DATABASE_PGPORT'),   # Database port (default is 5432)
+        'NAME': os.getenv('dbname'),       # Database name
+        'USER': os.getenv('user'),           # Database user
+        'PASSWORD': os.getenv('password'),   # Database password
+        'HOST': os.getenv('host'),           # Database host
+        'PORT': 6543,   # Database port
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
