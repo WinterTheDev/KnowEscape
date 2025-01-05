@@ -96,10 +96,10 @@ WSGI_APPLICATION = 'projectknowescape.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('PGDATABASE'),       # Database name
-        'USER': os.getenv('PGUSER'),           # Database user
-        'PASSWORD': os.getenv('PGPASSWORD'),   # Database password
-        'HOST': os.getenv('PGHOST'),           # Database host
+        'NAME': os.getenv('DATABASE_PGDATABASE'),       # Database name
+        'USER': os.getenv('DATABASE_PGUSER'),           # Database user
+        'PASSWORD': os.getenv('DATABASE_PGPASSWORD'),   # Database password
+        'HOST': os.getenv('DATABASE_PGHOST'),           # Database host
         'PORT': os.getenv('PGPORT', '5432'),   # Database port (default is 5432)
     }
 }
