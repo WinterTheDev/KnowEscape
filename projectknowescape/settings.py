@@ -100,7 +100,7 @@ DATABASES = {
         'USER': os.getenv('DATABASE_PGUSER'),           # Database user
         'PASSWORD': os.getenv('DATABASE_PGPASSWORD'),   # Database password
         'HOST': os.getenv('DATABASE_PGHOST'),           # Database host
-        'PORT': os.getenv('PGPORT', '5432'),   # Database port (default is 5432)
+        'PORT': os.getenv('DATABASE_PGPORT'),   # Database port (default is 5432)
     }
 }
 
