@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 import os
-import dj_database_url
 from pathlib import Path
 from dotenv import load_dotenv
 
@@ -30,7 +29,8 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG")
 
-ALLOWED_HOSTS = ['knowescape.co.za',
+ALLOWED_HOSTS = ['*',
+                'knowescape.co.za',
                  'www.knowescape.co.za',
                  '.vercel.app'
 ]
@@ -91,12 +91,8 @@ DATABASE_URL = os.getenv('DATABASE_URL')
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('dbname'),       # Database name
-        'USER': os.getenv('user'),           # Database user
-        'PASSWORD': os.getenv('password'),   # Database password
-        'HOST': os.getenv('host'),           # Database host
-        'PORT': 6543,   # Database port
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
