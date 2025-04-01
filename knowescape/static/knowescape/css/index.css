@@ -283,47 +283,25 @@ nav ul li:hover .sub-nav {
 
 .cta-container {
     height: 100%;
-}
-
-.cta-header {
-    height: 6rem;
     display: flex;
+    align-items: center;
+    flex-direction: column;
     justify-content: center;
 }
 
-.cta-header img {
-    height: 100%;
-    padding: 4px;
-    object-fit: contain;
-}
-
-.cta-text {
+#cta h2 {
+    width: 50%;
+    font-size: 3rem;
     color: #ffffff;
     text-align: center;
-    padding-inline: 16px;
+    margin-bottom: 2rem;
+    font-family: 'Instrument Serif';
+    text-shadow: rgba(0, 0, 0, 0.50) 0px 5px 10px;
 }
 
-.cta-footer {
-    display: flex;
-    justify-content: center;
-}
-
-.cta-link {
-    cursor: pointer;
-    color: #ffffff;
-    margin-block: 1rem;
-    border-radius: 5px;
-    padding-block: 1rem;
-    text-decoration: none;
-    padding-inline: 1.8rem;
-    border: 2px solid var(--orange);
-    background-color: var(--orange);
-    transition: color .3s ease, background-color .3s ease, border-color .3s ease;
-}
-
-.cta-link:hover {
-    background-color: transparent;
-    border-color: var(--orange)
+#cta h2 span {
+    font-family: inherit;
+    color: var(--orange);
 }
 
 #services {
