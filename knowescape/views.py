@@ -12,7 +12,7 @@ def index(request):
         'page_title': 'Business & Skills Development'
     }
 
-    return render(request, "knowescape/home.html", context)
+    return render(request, "knowescape/index.html", context)
 
 
 def contact(request):
