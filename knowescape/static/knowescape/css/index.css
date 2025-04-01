@@ -24,7 +24,7 @@ body {
     height: 100%;
     position: fixed;
     pointer-events: none;
-    background: linear-gradient(to bottom, var(--dark-green), var(--light-green) 70%);
+    background: linear-gradient(to bottom, var(--dark-green) 50%, var(--light-green));
 }
 
 .glow {
