@@ -175,6 +175,12 @@ nav ul li:hover .sub-nav {
     transition: background-color .3s ease;
 }
 
+.site-header {
+    color: #ffffff;
+    font-family: 'Instrument Serif';
+    text-shadow: rgba(0, 0, 0, 0.50) 0px 5px 10px;
+}
+
 .header-text {
     height: 50%;
     display: flex;
@@ -184,11 +190,8 @@ nav ul li:hover .sub-nav {
 }
 
 .header-text h1 {
-    color: #ffffff;
     font-size: 2.5rem;
     text-align: center;
-    font-family: 'Instrument Serif';
-    text-shadow: rgba(0, 0, 0, 0.50) 0px 5px 10px;
 }
 
 .header-text h1 span {
@@ -292,16 +295,114 @@ nav ul li:hover .sub-nav {
 #cta h2 {
     width: 50%;
     font-size: 3rem;
-    color: #ffffff;
     text-align: center;
     margin-bottom: 2rem;
-    font-family: 'Instrument Serif';
-    text-shadow: rgba(0, 0, 0, 0.50) 0px 5px 10px;
 }
 
 #cta h2 span {
     font-family: inherit;
     color: var(--orange);
+}
+
+#value {
+    height: 100vh;
+}
+
+.value-container {
+    height: 100%;
+    display: flex;
+    padding: 2rem 0;
+    flex-direction: column;
+}
+
+.value-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.value-header img {
+    height: 5rem;
+    margin-bottom: 2rem;
+}
+
+.value-header h2 {
+    font-size: 3rem;
+    text-align: center;
+    position: relative;
+}
+
+.value-header h2 span{
+    color: var(--orange);
+    font-family: inherit;
+}
+
+.value-header h2::after {
+    left: 50%;
+    bottom: -1rem;
+    content: '';
+    height: 2px;
+    width: 5rem;
+    position: absolute;
+    transform: translateX(-50%);
+    background-color: var(--orange);
+}
+
+.value-header p {
+    width: 30%;
+    opacity: .8;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.value-row {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.value-card {
+    flex: .2;
+    padding: 2rem;
+    min-height: 22rem;
+    border-radius: .5rem;
+    /* border: .5px solid #ffffff30; */
+    background: linear-gradient(to bottom, #ffffff25, #ffffff00);
+}
+
+.value-card img {
+    height: 3rem;
+}
+
+.value-card h5 {
+    margin: 1rem 0;
+    font-size: 2rem;
+    position: relative;
+    font-family: 'Instrument Serif';
+
+    background: -webkit-linear-gradient(#ffffff 50%, #999999);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.value-card h5::after {
+    left: 0;
+    bottom: -1rem;
+    content: '';
+    height: 2px;
+    width: 4rem;
+    position: absolute;
+    background-color: var(--orange);
+}
+
+.value-card p {
+    margin: 0;
+    width: 90%;
+    opacity: .5;
+    margin-top: 3rem;
+    font-size: .9rem;
+    font-weight: 200;
 }
 
 #services {
