@@ -12,7 +12,6 @@
 }
 
 body {
-    padding: 0 2rem;
     position: relative;
 }
 
@@ -44,7 +43,6 @@ body {
 
 header {
     height: 100vh;
-    padding: 1rem 0;
     position: relative;
     margin-bottom: 20rem;
 }
@@ -52,6 +50,7 @@ header {
 .header-container {
     height: 100%;
     display: flex;
+    padding: 1rem 2rem;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -177,15 +176,26 @@ nav ul li:hover .sub-nav {
 
 .action-btn {
     width: 8rem;
+    opacity: .9;
+    line-height: 1;
     display: block;
     color: #ffffff;
-    padding: .5rem 0;
+    padding: .75rem 0;
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
     background-color: var(--orange);
     background: linear-gradient(to bottom, var(--orange), #ff8928);
-    transition: background-color .3s ease;
+    transition: opacity .3s ease,
+                background-color .3s ease;
+}
+
+.action-btn:hover {
+    opacity: 1;
+}
+
+.action-btn:active {
+    transform: scale(1.01);
 }
 
 .site-header {
@@ -324,7 +334,7 @@ nav ul li:hover .sub-nav {
 .value-container {
     height: 100%;
     display: flex;
-    padding: 2rem 0;
+    padding: 2rem;
     flex-direction: column;
 }
 
@@ -364,6 +374,7 @@ nav ul li:hover .sub-nav {
 .value-header p {
     width: 30%;
     opacity: .8;
+    font-size: .9rem;
     margin-top: 2rem;
     text-align: center;
 }
@@ -419,96 +430,94 @@ nav ul li:hover .sub-nav {
 }
 
 #services {
-    height: 100vh
+    height: 100vh;
+    overflow: -moz-hidden-unscrollable;
+    position: relative;
+}
+
+#services-logo {
+    top: 50%;
+    right: 0;
+    opacity: .25;
+    height: 90%;
+    position: absolute;
+    transform: translate(40%, -50%);
 }
 
 .services-container {
     height: 100%;
     display: flex;
-    padding: 1rem;
+    padding: 2rem 5rem;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
-.services-heading {
-    font-size: 2rem;
-    font-weight: 700;
+#services h2 {
+    font-size: 3rem;
     color: #ffffff;
-    padding-inline-start: 1rem;
-    border-left: .5rem solid var(--orange);
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+    font-family: "Instrument Serif";
+    border-left: 1rem solid var(--orange);
 }
 
-.services-heading span {
-    color: var(--orange)
+#services h2 span {
+    color: var(--orange);
+    font-family: inherit;
 }
 
-.services-content {
-    height: 78%;
+#services .tagline {
+    width: 30%;
+    opacity: .8;
+    font-size: .9rem;
+    margin-top: 2rem;
+}
+
+.service-row {
+    flex: 1;
+    gap: 4rem;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.service-col {
-    height: 33%;
-    padding: 12px;
+.service-card {
+    flex: .25;
     overflow: hidden;
     border-radius: 5px;
     position: relative;
-    margin-block-end: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: linear-gradient(to bottom, #ffffff25, #ffffff00);
 }
 
-.service-col::before {
-    inset: 0;
-    z-index: 1;
-    content: '';
-    position: absolute;
-    background: linear-gradient(to bottom, #00000000, #000000ab)
-}
-
-.service-col img {
-    top: 0;
-    left: 0;
+.service-card img {
     width: 100%;
-    height: 100%;
+    height: 16rem;
     object-fit: cover;
-    position: absolute;
-    object-position: center;
-    transition: transform 0.5s ease;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
 }
 
-.service-text {
-    z-index: 2;
-    bottom: .5rem;
-    color: #ffffff;
-    position: absolute;
-    font-weight: 600;
-    transition: margin 0.5s ease;
+.service-card h3  {
+    margin: 0;
+    font-family: 'Instrument Serif';
+    background: -webkit-linear-gradient(#ffffff 50%, #999999);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.service-description {
-    display: none;
+.service-card div {
+    height: 12rem;
 }
 
-.service-link {
-    top: 1rem;
-    right: 1rem;
-    z-index: 10;
-    cursor: pointer;
-    color: #ffffff;
-    position: absolute;
-    border-radius: 5px;
-    padding-block: .4rem;
-    text-decoration: none;
-    padding-inline: 1rem;
-    border: 2px solid var(--orange);
-    background-color: var(--orange);
-    transition: background-color .3s ease, border-color .3s ease;
+.service-card p {
+    opacity: .8;
+    font-size: .9rem;
+    margin: 1rem 0;
 }
 
-.service-link:hover {
-    border-color: var(--orange);
-    background-color: transparent;
+.service-card .action-btn {
+    font-size: .9rem;
+    margin-top: 2rem;
 }
 
 .divider {

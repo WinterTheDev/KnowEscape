@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="{% static 'knowescape/css/fonts.css' %}">
     <link rel="stylesheet" href="{% static 'knowescape/css/animations.css' %}">
 
-    <title>{{page_title}} - KnowEscape</title>
+    <title>KnowEscape Consulting | Skills Development • Enterprise Development • Supplier Development • Startup Support</title>
 </head>
 <body>
     <div class="overlay"></div>
@@ -219,46 +219,54 @@
             </div>
         </div>
     </section>
-    <!-- 
     <section id="services">
+        <img src="{% static 'knowescape/brand/logo - glow.png' %}" id="services-logo" alt="">
         <div class="container-fluid services-container">
-            <h2 class="services-heading">All our services<br><span>at a glance...</span></h2>
-            <div class="services-content">
-                <div class="service-col">
-                    <img src="{% static 'knowescape/images/header-boardroom.webp' %}" class="service-img">
-                    <div class="service-text">
-                        <h3 class="service-title enterprise-title">Enterprise & Supplier<br> Development</h3>
-                        <p class="service-description">
-                            From online stores to professional portfolios 
-                            to get you hired.
+            <div class="services-header">
+                <h2>Our services<br><span>at a glance...</span></h2>
+                <p class="tagline">
+                    We offer a range of services to equip you with all the fundamental skills 
+                    to transform your business, empowering you to navigate challenges, 
+                    seize opportunities, and achieve sustainable growth with confidence.
+                </p>
+            </div>
+            <div class="service-row">
+                <div class="service-card">
+                    <img src="{% static 'knowescape/images/services-esdev.jpeg' %}">
+                    <div class="p-3">
+                        <h3>Enterprise & Supplier Development</h3>
+                        <p>
+                            With years of experience and a passion for innovation, 
+                            our team delivers solutions tailored to your needs. 
                         </p>
+                        <a href="{% url 'es-dev' %}" class="action-btn">Learn More</a>
                     </div>
-                    <a href="{% url 'es-dev' %}" class="service-link">Learn More</a>
                 </div>
-                <div class="service-col">
-                    <img src="{% static 'knowescape/images/header-meeting.webp' %}" class="service-img">
-                    <div class="service-text">
-                        <h3 class="service-title">Skills Development</h3>
-                        <p class="service-description">
-                            Equipping you with all the right skills to 
-                            build your thriving brand or business.
+                <div class="service-card">
+                    <img src="{% static 'knowescape/images/services-skills.jpg' %}">
+                    <div class="p-3">
+                        <h3>Skills Development</h3>
+                        <p>
+                            Equipping you with all the right skills to build your 
+                            thriving brand or business.
                         </p>
+                        <a href="{% url 'es-dev' %}" class="action-btn">Learn More</a>
                     </div>
-                    <a href="{% url 'skills-dev' %}" class="service-link">Learn More</a>
                 </div>
-                <div class="service-col">
-                    <img src="{% static 'knowescape/images/header-storefront.webp' %}" class="service-img">
-                    <div class="service-text">
-                        <h3 class="service-title">Start-Up Support</h3>
-                        <p class="service-description">
-                            Guidance and Support for start-up enterprises
+                <div class="service-card">
+                    <img src="{% static 'knowescape/images/services-startup.jpeg' %}">
+                    <div class="p-3">
+                        <h3>Startup Support</h3>
+                        <p>
+                            Guidance and support from industry veterans to help navigate the uncertainty of the modern-day market.
                         </p>
+                        <a href="{% url 'es-dev' %}" class="action-btn">Learn More</a>
                     </div>
-                    <a href="{% url 'start-up' %}" class="service-link">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
+    <!-- 
     <section id="accreditations">
         <div class="container-fluid accreditations-container">
             <article class="accreditation">
