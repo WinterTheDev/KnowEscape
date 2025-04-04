@@ -145,11 +145,24 @@ nav ul li:hover .sub-nav {
 .sub-nav li a {
     width: 100%;
     display: flex;
-    padding: .5rem;
+    padding: .5rem 1rem;
     text-wrap: nowrap;
+    position: relative;
     border-radius: .25rem;
     justify-content: left !important;
     transition: background-color .3s ease;
+}
+
+.sub-nav li a::after {
+    left: 0;
+    top: 50%;
+    width: 3px;
+    content: '';
+    height: 40%;
+    position: absolute;
+    transform: translateY(-50%);
+    background-color: #FF6A00;
+    border-radius: .5rem 0 .5rem 0;
 }
 
 .sub-nav li a:hover {
