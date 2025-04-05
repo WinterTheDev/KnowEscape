@@ -315,7 +315,7 @@ nav ul li:hover .sub-nav {
     justify-content: center;
 }
 
-#cta h2 {
+.cta-container h2 {
     width: 50%;
     font-size: 3rem;
     text-align: center;
@@ -325,6 +325,47 @@ nav ul li:hover .sub-nav {
 #cta h2 span {
     font-family: inherit;
     color: var(--orange);
+}
+
+#cta-extension {
+    padding: 0;
+    height: 100vh;
+}
+
+.cta-header {
+    height: 60%;
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cta-header .site-header {
+    width: 50%;
+    font-size: 3rem;
+    text-align: left;
+    margin-left: 2rem;
+}
+.cta-logo {
+    height: 12rem;
+}
+
+.cta-text {
+    width: 30%;
+}
+
+.cta-images {
+    height: 40%;
+    display: flex;
+    overflow: hidden;
+    border-radius: 2rem 2rem 0 0;
+}
+
+.cta-images img {
+    flex: 1;
+    object-fit: cover;
+    -webkit-mask-image: linear-gradient(to bottom, #000000 60%, #00000000 100%);
+    mask-image: linear-gradient(to bottom, #000 60%, #00000000 100%);
 }
 
 #value {
@@ -436,11 +477,12 @@ nav ul li:hover .sub-nav {
 }
 
 #services-logo {
-    top: 50%;
     right: 0;
-    opacity: .25;
+    top: 50%;
     height: 90%;
+    opacity: .25;
     position: absolute;
+    pointer-events: none;
     transform: translate(40%, -50%);
 }
 
@@ -450,6 +492,13 @@ nav ul li:hover .sub-nav {
     padding: 2rem 5rem;
     flex-direction: column;
     justify-content: space-evenly;
+}
+
+.services-header {
+    flex: .3;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 #services h2 {
@@ -470,11 +519,10 @@ nav ul li:hover .sub-nav {
     width: 30%;
     opacity: .8;
     font-size: .9rem;
-    margin-top: 2rem;
 }
 
 .service-row {
-    flex: 1;
+    flex: .7;
     gap: 4rem;
     display: flex;
     align-items: center;
