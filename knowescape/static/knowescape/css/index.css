@@ -4,6 +4,28 @@
     --orange: #FF6A00;
 }
 
+/* Lenis Styles */
+
+html.lenis, html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -352,6 +374,7 @@ nav ul li:hover .sub-nav {
 
 .cta-text {
     width: 30%;
+    color: #ffffff;
 }
 
 .cta-images {
@@ -415,6 +438,7 @@ nav ul li:hover .sub-nav {
 .value-header p {
     width: 30%;
     opacity: .8;
+    color: #ffffff;
     font-size: .9rem;
     margin-top: 2rem;
     text-align: center;
@@ -468,10 +492,12 @@ nav ul li:hover .sub-nav {
     margin-top: 3rem;
     font-size: .9rem;
     font-weight: 200;
+    color: #ffffff;
 }
 
 #services {
     height: 100vh;
+    margin-bottom: 5rem;
     overflow: -moz-hidden-unscrollable;
     position: relative;
 }
@@ -501,6 +527,10 @@ nav ul li:hover .sub-nav {
     flex-direction: column;
 }
 
+.services-header p {
+    color: #ffffff;
+}
+
 #services h2 {
     font-size: 3rem;
     color: #ffffff;
@@ -523,7 +553,7 @@ nav ul li:hover .sub-nav {
 
 .service-row {
     flex: .7;
-    gap: 4rem;
+    gap: 2rem;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -561,6 +591,7 @@ nav ul li:hover .sub-nav {
     opacity: .8;
     font-size: .9rem;
     margin: 1rem 0;
+    color: #ffffff;
 }
 
 .service-card .action-btn {
@@ -671,41 +702,85 @@ nav ul li:hover .sub-nav {
 }
 
 #contact {
-    height: 100%;
-    min-height: 100dvh;
+    height: 100vh;
+    position: relative;
+}
+
+#contact-bg {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
 }
 
 .contact-container {
     height: 100%;
+    padding: 2rem;
     position: relative;
 }
 
 .contact-header {
-    display: flex;
-    padding-block: 1rem;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
-.contact-header h1, p {
-    color: #ffffff;
+.contact-header img {
+    height: 6rem;
+    margin-bottom: 1rem;
 }
 
-.contact-header span {
+.contact-header h1 {
+    background: -webkit-linear-gradient(#ffffff 50%, #999999);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Instrument Serif';
+}
+
+.contact-header hr {
+    width: 5%;
+    opacity: 1;
+    padding: 1px;
+    margin: 1.5rem auto;
+    background: var(--orange);
+}
+
+.contact-header p {
+    color: #ffffff90;
+}
+
+.contact-header p span {
     color: var(--orange);
 }
 
-#contact-form {
-    padding: 16px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    background-color: var(--green);
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+#contact form {
+    gap: 1rem;
+    width: 40%;
+    margin: auto;
+    display: flex;
+    padding: 1rem;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    /* border: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
 .form-block {
     margin-block: 8px;
+    width: calc(50% - 0.5rem); /* two columns with gap accounted */
+}
+
+.form-block.contact-block {
+    width: 75%; /* full width for the textarea */
+}
+
+.form-block.submit-block {
+    display: flex;
+    align-items: flex-end;
+    width: 20%; /* full width for the textarea */
 }
 
 .form-block input,
@@ -713,35 +788,26 @@ nav ul li:hover .sub-nav {
     width: 100%;
     outline: none;
     display: block;
-    border-radius: 4px;
     border: none;
-    padding: 1rem;
+    padding: .5rem;
     color: #ffffff;
-    background-color: #1a2922;
+    background: #14201B40;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.form-block textarea {
+    resize: none;
 }
 
 .form-block label {
+    font-weight: 200;
     margin-bottom: 8px;
-    color: var(--orange);
+    color: #ffffff80;
 }
 
-.contact-img {
-    display: none;
-}
-
-#contact-form button {
-    width: 100%;
+#contact form button {
     border: none;
-    cursor: pointer;
-    color: #ffffff;
-    margin-block: 1rem;
-    border-radius: 5px;
-    padding-block: 1rem;
-    text-decoration: none;
-    padding-inline: 1.8rem;
-    border: 2px solid var(--orange);
-    background-color: var(--orange);
-    transition: background-color .3s ease, border-color .3s ease;
 }
 
 #contact-form button:hover {

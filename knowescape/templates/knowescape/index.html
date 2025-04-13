@@ -169,7 +169,8 @@
                     <img class="cta-logo" src="{% static 'knowescape/brand/logo - glow.png' %}" alt="">
                     <h2 class="site-header">
                         With <span>KnowEscape Consulting,</span><br>
-                        You can <span>make the most</span> out of your business
+                        You can <span>make the most</span> of your business
+                        - <span>Any Business</span>
                     </h2>
                 </div>
                 <div class="cta-text">
@@ -178,8 +179,15 @@
                         eos at rem aut quisquam dicta odio! Eius, maxime quaerat 
                         pariatur perferendis culpa porro fuga.
                     </p>
-                    <div>
-                        
+                    <div class="cta-stats">
+                        <p>
+
+                        </p>
+                    </div>
+                    <div class="cta-stats">
+                        <p>
+
+                        </p>
                     </div>
                 </div>
             </div>
@@ -246,7 +254,7 @@
         </div>
     </section>
     <section id="services">
-        <img src="{% static 'knowescape/brand/logo - glow.png' %}" id="services-logo" alt="">
+        <!-- <img src="{% static 'knowescape/brand/logo - glow.png' %}" id="services-logo" alt=""> -->
         <div class="container-fluid services-container">
             <div class="services-header">
                 <h2>Our services<br><span>at a glance...</span></h2>
@@ -262,8 +270,8 @@
                     <div class="p-3">
                         <h3>Enterprise & Supplier Development</h3>
                         <p>
-                            With years of experience and a passion for innovation, 
-                            our team delivers solutions tailored to your needs. 
+                            Our years of experience and a passion for innovation, 
+                            delivers solutions tailored to your needs. 
                         </p>
                         <a href="{% url 'es-dev' %}" class="action-btn">Learn More</a>
                     </div>
@@ -282,6 +290,16 @@
                 <div class="service-card">
                     <img src="{% static 'knowescape/images/services-startup.jpeg' %}">
                     <div class="p-3">
+                        <h3>Post-Programme Support</h3>
+                        <p>
+                            Once you've completed the programme, we will still be with you to help you find your footing.
+                        </p>
+                        <a href="{% url 'es-dev' %}" class="action-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="{% static 'knowescape/images/services-startup.jpeg' %}">
+                    <div class="p-3">
                         <h3>Startup Support</h3>
                         <p>
                             Guidance and support from industry veterans to help navigate the uncertainty of the modern-day market.
@@ -291,6 +309,64 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section id="contact">
+        <div class="container-fluid contact-container">
+            <div class="contact-header">
+                <img src="{% static 'knowescape/brand/logo - slim.png' %}" alt="knowescape logo without text">
+                <h1 class="section-title">Take the first step</h1>
+                <hr>
+                <p>
+                    How can we help <span>transform your business?</span>
+                </p>
+            </div>
+            <form action="{% url 'contact' %}" method="POST">
+                {% csrf_token %}
+                <div class="form-block">
+                    <label for="id_first_name">First name:</label>
+                    <input type="text" name="first_name" required id="id_first_name">
+                </div>
+                
+                <div class="form-block">
+                    <label for="id_last_name">Last name:</label>
+                    <input type="text" name="last_name" required id="id_last_name">
+                </div>
+                
+                <div class="form-block">
+                    <label for="id_email">Email:</label>
+                    <input type="email" name="email" maxlength="320" required id="id_email">
+                </div>
+                
+                <div class="form-block">
+                    <label for="id_company">Company:</label>
+                    <input type="text" name="company" id="id_company">
+                </div>
+                
+                <div class="form-block contact-block">
+                    <label for="id_message">Message:</label>
+                    <textarea name="message" rows="10" required id="id_message"></textarea>
+                </div>
+                <div class="form-block submit-block">
+                    <button class="action-btn" type="submit">Send</button>                         
+                </div>
+            </form>
+        </div>
+        <svg id="contact-bg" width="1600" height="520" viewBox="0 0 1600 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_f_58_66)">
+            <path d="M0 319.759C129.008 184.036 302.518 570.386 550.034 319.759C797.549 69.1322 1107.57 732.329 1600.1 319.759C2092.63 -92.811 1600.1 693 1600.1 693H0V319.759Z" fill="url(#paint0_linear_58_66)" fill-opacity="0.59"/>
+            </g>
+            <defs>
+            <filter id="filter0_f_58_66" x="-200" y="0" width="2219" height="893" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_58_66"/>
+            </filter>
+            <linearGradient id="paint0_linear_58_66" x1="800.048" y1="319.759" x2="800.048" y2="693" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#E66901"/>
+            <stop offset="1" stop-color="#A34A00"/>
+            </linearGradient>
+            </defs>
+        </svg>            
     </section>
     <!-- 
     <section id="accreditations">
@@ -364,48 +440,11 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section id="contact">
-        <div class="container-fluid contact-container">
-            <div class="contact-header">
-                <h1>Reach out to us</h1>
-                <p>How can we <span>transform your business?</span></p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-img">
-                    <img src="{% static 'knowescape/images/contact-bg.webp' %}">
-                </div>
-                <form action="{% url 'contact' %}" method="POST" id="contact-form">
-                    {% csrf_token %}
-                    <div class="form-block">
-                        <label for="id_first_name">First name:</label>
-                        <input type="text" name="first_name" required id="id_first_name">
-                    </div>
-                    
-                    <div class="form-block">
-                        <label for="id_last_name">Last name:</label>
-                        <input type="text" name="last_name" required id="id_last_name">
-                    </div>
-                    
-                    <div class="form-block">
-                        <label for="id_email">Email:</label>
-                        <input type="email" name="email" maxlength="320" required id="id_email">
-                    </div>
-                    
-                    <div class="form-block">
-                        <label for="id_company">Company:</label>
-                        <input type="text" name="company" id="id_company">
-                    </div>
-                    
-                    <div class="form-block contact-block">
-                        <label for="id_message">Message:</label>
-                        <textarea name="message" rows="10" required id="id_message"></textarea>
-                    </div>
-                    <button type="submit">Send</button>                         
-                </form>
-            </div>
-        </div>
-    </section> -->
+    </section> 
+    We’re here to help!
+
+We’ll answer any questions you may have, and help you get started with
+TRANSFORMING YOUR BUSINESS!-->
     {% if messages %}
     <ul class="messages animate__animated animate__slideInUp">
         {% for message in messages %}
@@ -413,6 +452,10 @@
         {% endfor %}
     </ul>
     {% endif %}
+
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
@@ -477,5 +520,23 @@
             }
         }
     </script>
+
+    <!-- Lenis -->
+    <script>
+        const lenis = new Lenis()
+
+        lenis.on('scroll', (e) => {
+        console.log(e)
+        })
+
+        lenis.on('scroll', ScrollTrigger.update)
+
+        gsap.ticker.add((time)=>{
+        lenis.raf(time * 1000)
+        })
+
+        gsap.ticker.lagSmoothing(0)
+    </script>
+
 </body>
 </html>

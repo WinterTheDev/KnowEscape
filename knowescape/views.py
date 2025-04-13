@@ -14,19 +14,13 @@ def index(request):
 
     return render(request, "knowescape/index.html", context)
 
-def home(request):
-
-    context = {
-        'page_title': 'Business & Skills Development'
-    }
-
-    return render(request, "knowescape/home.html", context)
-
 
 def contact(request):
 
     if request.method == "POST":
         form = ContactForm(request.POST)
+        sender = request.META.get('HTTP_REFERER')
+
         if form.is_valid():
             sender_first = request.POST['first_name']
             sender_last = request.POST['last_name']
@@ -54,7 +48,7 @@ def contact(request):
         'page_title': 'Reach Out'
     }
 
-    return redirect('home')
+    return redirect(sender)
 
 
 def start_up(request):
