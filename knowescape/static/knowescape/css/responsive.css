@@ -64,6 +64,10 @@
         height: 30rem;
     }
 
+    #cta {
+        margin: 5rem 0 5rem 0
+    }
+
     .cta-container h2 {
         width: 60%;
     }
@@ -75,5 +79,99 @@
     .cta-header .site-header {
         font-size: 2.5rem;
         margin-left: 2rem;
+    }
+
+    #value {
+        height: 100%;
+    }
+
+    .value-container {
+        padding: 1rem 2rem;
+    }
+
+    .value-header {
+        margin: 2rem 0;
+    }
+    
+    .value-header img {
+        height: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .value-header h2 {
+        font-size: 2.5rem;
+    }
+    
+    .value-header p {
+        font-size: .8rem;
+    }
+
+    .value-row {
+        gap: 1rem;
+        padding: 1rem;
+        justify-content: space-between;
+    }
+
+    .value-card {
+        flex: 1;
+        padding: 2rem 1.5rem;
+        min-height: 22rem;
+    }
+    
+    .value-card img {
+        height: 2.5rem;
+    }
+    
+    .value-card h5 {
+        margin: 1rem 0;
+        font-size: 1.5rem;
+    }
+
+    #services {
+        height: 100%;
+    }
+
+    .services-container {
+        padding: 2rem;
+    }
+
+    #services .tagline {
+        width: 40%;
+        margin: 2rem 0;
+        font-size: .8rem;
+    }
+
+    .service-row {
+        justify-content: space-between;
+    }
+
+    .service-card {
+        flex: .3;
+    }
+
+    .service-card img {
+        width: 100%;
+        height: 12rem;
+    }
+
+    .service-card div  {
+        min-height: 16rem;
+    }
+
+    .service-card h3  {
+        font-size: 1.4rem;
+    }
+
+    .service-card p  {
+        font-size: .8rem;
+    }
+
+    .service-card:nth-of-type(3) {
+        /* Set its display property to none to hide it */
+        display: none;
+      }
+
+    #contact {
+        height: 100%;
     }
 }
