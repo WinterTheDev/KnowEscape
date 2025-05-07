@@ -800,10 +800,17 @@ nav ul li:hover .sub-nav {
     display: block;
     border: none;
     padding: .5rem;
-    color: #ffffff;
+    font-size: .8rem;
+    color: #ffffff80;
     background: #14201B40;
     border-radius: 4px;
+    transition: border .3s ease;
     border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.form-block input:focus,
+.form-block textarea:focus {
+    border: 1px solid #FF6A00;
 }
 
 .form-block textarea {
