@@ -170,8 +170,4 @@
         /* Set its display property to none to hide it */
         display: none;
       }
-
-    #contact {
-        height: 100%;
-    }
 }

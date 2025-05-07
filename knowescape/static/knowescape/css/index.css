@@ -704,7 +704,13 @@ nav ul li:hover .sub-nav {
 
 #contact {
     height: 100vh;
+    display: flex;
     position: relative;
+}
+
+.contact-img {
+    width: 30%;
+    background-color: red;
 }
 
 #contact-bg {
@@ -716,9 +722,10 @@ nav ul li:hover .sub-nav {
 }
 
 .contact-container {
+    width: 60%;
     height: 100%;
-    padding: 2rem;
-    position: relative;
+    display: grid;
+    place-content: center;
 }
 
 .contact-header {
@@ -756,10 +763,10 @@ nav ul li:hover .sub-nav {
 
 #contact form {
     gap: 1rem;
-    width: 40%;
     margin: auto;
     display: flex;
     padding: 1rem;
+    max-width: 70%;
     flex-wrap: wrap;
     border-radius: 8px;
     backdrop-filter: blur(5px);
