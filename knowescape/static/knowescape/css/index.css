@@ -738,7 +738,8 @@ nav ul li:hover .sub-nav {
     margin-bottom: 1rem;
 }
 
-.contact-header h1 {
+.contact-header h2 {
+    font-size: 2.5rem;
     background: -webkit-linear-gradient(#ffffff 50%, #999999);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -788,6 +789,7 @@ nav ul li:hover .sub-nav {
 .form-block.submit-block {
     display: flex;
     align-items: flex-end;
+    justify-content: flex-end;
     width: 20%; /* full width for the textarea */
 }
 

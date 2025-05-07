@@ -169,5 +169,57 @@
     .service-card:nth-of-type(3) {
         /* Set its display property to none to hide it */
         display: none;
-      }
+    }
+
+    .contact-header img {
+        height: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .contact-header h2 {
+        font-size: 2rem;
+    }
+    
+    .contact-header hr {
+        width: 10%;
+        margin: 1rem auto;
+    }
+
+    .contact-header p {
+        font-size: .8rem;
+        color: #ffffff90;
+    }
+    
+    .contact-header {
+        margin-bottom: 1rem;
+    }
+    
+    #contact form {
+        max-width: 80%;
+    }
+    
+    .form-block {
+        margin-block: 0;
+    }
+    
+    .form-block.contact-block {
+        width: 65%; /* full width for the textarea */
+    }
+    
+    .form-block.submit-block {
+        width: 30%; /* full width for the textarea */
+    }
+    
+    .form-block input,
+    .form-block textarea {
+        padding: .3rem;
+    }
+
+    .form-block label {
+        font-size: .9rem;
+    }
+
+    .form-block textarea {
+        max-height: 10rem;
+    }
 }
