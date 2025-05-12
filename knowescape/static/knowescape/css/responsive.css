@@ -77,8 +77,14 @@
     }
 
     .cta-header .site-header {
-        font-size: 2.5rem;
+        font-size: 2rem;
         margin-left: 2rem;
+    }
+
+    .cta-text {
+        width: 30%;
+        font-size: .8rem;
+        color: #ffffff;
     }
 
     #value {
@@ -142,33 +148,24 @@
     }
 
     .service-row {
+        margin-top: 1rem;
         justify-content: space-between;
     }
 
     .service-card {
-        flex: .3;
+        flex: 1;
     }
 
-    .service-card img {
-        width: 100%;
+    .service-card > .img {
         height: 12rem;
     }
 
-    .service-card div  {
-        min-height: 16rem;
+    .service-card > .details > h3  {
+        font-size: 1.6rem;
     }
 
-    .service-card h3  {
-        font-size: 1.4rem;
-    }
-
-    .service-card p  {
-        font-size: .8rem;
-    }
-
-    .service-card:nth-of-type(3) {
-        /* Set its display property to none to hide it */
-        display: none;
+    .service-card > .details > p  {
+        font-size: .9rem;
     }
 
     .contact-header img {
