@@ -45,7 +45,7 @@ body {
     height: 100%;
     position: fixed;
     pointer-events: none;
-    background: linear-gradient(to bottom, var(--dark-green) 50%, var(--light-green));
+    background: linear-gradient(to bottom, var(--dark-green) 60%, var(--light-green));
 }
 
 .glow {
@@ -597,17 +597,6 @@ nav ul li:hover .sub-nav {
     -webkit-text-fill-color: transparent;
 }
 
-
-.service-card > .details > h3::after {
-    left: 0%;
-    bottom: -1rem;
-    content: '';
-    height: 2px;
-    width: 5rem;
-    position: absolute;
-    background-color: var(--orange);
-}
-
 .service-card > .details > img {
     height: 3rem;
     margin-bottom: 1rem ;
@@ -744,11 +733,11 @@ nav ul li:hover .sub-nav {
     height: 100vh;
     display: flex;
     position: relative;
+    margin-bottom: 10rem;
 }
 
 .contact-img {
     width: 30%;
-    background-color: red;
 }
 
 #contact-bg {
@@ -886,4 +875,143 @@ nav ul li:hover .sub-nav {
 .messages li {
     list-style: none;
     font-size: 14px;
+}
+
+#footer {
+    height: 100%;
+    padding: 1rem;
+    overflow-x: hidden;
+    position: relative;
+}
+
+#footer > #bg {
+    bottom: 0;
+    z-index: -1;
+    width: 100vw;
+    position: absolute;
+    pointer-events: none;
+}
+
+.footer-container {
+    width: 100%;
+    height: 100%;
+    border-radius: .25rem;
+    background: #ffffff25;
+    border: .5px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-brand > img {
+    height: 6rem;
+    margin: 1rem;
+}
+
+.footer-links {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15rem;
+}
+
+.footer-links > div {
+    gap: 5rem;
+    display: flex;
+}
+
+.footer-column {
+    padding: 0;
+    list-style: none;
+}
+
+.footer-column > h5 {
+    font-size: .9;
+    color: #ffffff60;
+    margin-bottom: 1.5rem;
+    letter-spacing: .02rem;
+}
+
+.footer-column > li {
+    margin-bottom: .5rem;
+}
+
+.footer-column > li,
+.footer-column > li > a {
+    font-size: .9rem;
+    font-weight: 300;
+    color: #ffffff;
+    position: relative;
+    text-decoration: none;
+    letter-spacing: .02rem;
+}
+
+.footer-column > li > a::after {
+    left: 0;
+    bottom: -.25rem;
+    content: '';
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    background-color: #FF6A00;
+    transition: transform .3s ease;
+    border-radius: .5rem 0 .5rem 0;
+}
+
+.footer-column > li > a:hover {
+    transform: translateY(-.1rem);
+}
+
+.footer-column > li > a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.footer-divider {
+    height: .5px;
+    margin: 0 2rem;
+    color: #ffffff90;
+}
+
+.copyrights {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyrights > p {
+    margin: 0;
+    display: flex;
+    font-weight: 300;
+    font-size: .8rem;
+    color: #ffffff60;
+    align-items: center;
+    letter-spacing: .02rem;
+}
+
+.copyrights > .developer-credit > span > a {
+    margin-left: .4rem;
+    color: #FF6A00;
+    text-decoration: none;
+}
+
+.copyrights > .social-links {
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+
+.copyrights > .social-links li a {
+    text-decoration: none;
+}
+
+.copyrights > .social-links li a ion-icon {
+    font-size: 1.8rem;
+    color: #ffffff50;
+    transition: color .3s ease;
+}
+
+.copyrights > .social-links li a ion-icon:hover {
+    color: #ffffff;
 }
