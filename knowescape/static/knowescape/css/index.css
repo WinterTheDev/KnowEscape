@@ -988,6 +988,10 @@ nav ul li:hover .sub-nav {
     letter-spacing: .02rem;
 }
 
+.footer-date {
+    margin-left: .2rem;
+}
+
 .copyrights > .developer-credit > span > a {
     margin-left: .4rem;
     color: #FF6A00;

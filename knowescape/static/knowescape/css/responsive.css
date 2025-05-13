@@ -219,4 +219,8 @@
     .form-block textarea {
         max-height: 10rem;
     }
+    
+    .footer-links {
+        margin-top: 10rem;
+    }
 }

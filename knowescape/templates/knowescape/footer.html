@@ -85,11 +85,11 @@
             </div>
             <hr class="footer-divider">
             <div class="copyrights">
-                <p class="copyright">© KNOWESCAPE CONSULTING 2025. ALL RIGHTS RESERVED</p>
+                <p class="copyright">© KnowEscape Consulting <span class="footer-date"></span>. All Rights Reserved</p>
                 <p class="developer-credit">
-                    DESIGNED AND DEVELOPED BY 
+                    Designed and Developed by  
                     <span>
-                        <a href="https://linkedin.com/in/rhulanimogotsi">WINTERTHEDEV</a>
+                        <a href="https://linkedin.com/in/rhulanimogotsi">WinterTheDev</a>
                     </span>
                 </p>
                 <ul class="social-links">
@@ -112,3 +112,14 @@
             </div>
         </div>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const footerDate = document.querySelector('.footer-date');
+            
+            if (footerDate) {
+                const currentYear = new Date().getFullYear();
+                footerDate.innerHTML = currentYear;
+            }
+        });
+    </script>
