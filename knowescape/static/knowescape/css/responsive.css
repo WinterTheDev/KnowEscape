@@ -190,9 +190,9 @@
         padding: 4rem 0;
     }
     
-    .faculty-card > .headshot {
+    .faculty-card {
         width: 16rem;
-        height: 20rem;
+        height: 24rem;
     }
 
     .contact-header img {
