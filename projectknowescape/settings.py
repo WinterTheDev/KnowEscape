@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+# THIS IS THE LOCAL DEV REPO, NOT PRODUCTION
+
 import os
 from pathlib import Path
 from dotenv import load_dotenv
@@ -24,10 +26,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = '6z#9p$kx%2v!m3n5r8t0w&yq1j*lf4h7c@d2b#e$gu^i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG")
+DEBUG = True
 
 ALLOWED_HOSTS = ['*',
                 'knowescape.co.za',
